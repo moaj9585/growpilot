@@ -1,69 +1,323 @@
-<!DOCTYPE html><html lang="bn">
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>অনলাইন কোরআন শিক্ষা একাডেমি</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f3f8f4;color:#26332c;line-height:1.8}
-header{background:#075e45;color:white;text-align:center;padding:30px 15px}
-header h1{margin:0;font-size:27px}
-nav{background:#064b38;text-align:center;padding:12px 5px;position:sticky;top:0}
-nav a{color:white;text-decoration:none;display:inline-block;margin:5px 8px;font-weight:bold}
-.hero{text-align:center;padding:45px 18px;background:linear-gradient(135deg,#d8f3e5,#fff7dc)}
-.hero h2{color:#075e45;font-size:27px}
-.container{max-width:850px;margin:auto;padding:15px}
-.card{background:white;padding:22px;margin:18px 0;border-radius:14px;box-shadow:0 3px 12px #dce6df}
-.card h2,.card h3{color:#075e45}
-.button{display:inline-block;background:#087f5b;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;margin:5px}
-.button:hover{background:#064b38}
-footer{background:#064b38;color:white;text-align:center;padding:22px}
-.small{font-size:14px;color:#64736a}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="আল-নূর অনলাইন কোরআন একাডেমি। নূরানি কায়দা ও নাজেরা কোরআন শিক্ষা।">
+  <title>আল-নূর অনলাইন কোরআন একাডেমি</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #f5f8f5;
+      color: #26372d;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #064e3b;
+      color: white;
+      text-align: center;
+      padding: 35px 16px;
+      border-bottom: 5px solid #d4af37;
+    }
+
+    .logo {
+      font-size: 48px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 8px 0;
+    }
+
+    header p {
+      color: #ffe28a;
+    }
+
+    nav {
+      background: #033b2d;
+      padding: 12px 8px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 15px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #ffe28a;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #064e3b, #087553);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .hero h2 {
+      color: #ffe28a;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .button {
+      display: inline-block;
+      background: #d4af37;
+      color: #173c2a;
+      text-decoration: none;
+      padding: 11px 23px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #f0d36e;
+    }
+
+    section {
+      max-width: 1050px;
+      padding: 45px 18px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #064e3b;
+      font-size: 28px;
+      margin-bottom: 28px;
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      border-top: 5px solid #d4af37;
+      box-shadow: 0 5px 18px #0000000d;
+    }
+
+    .card h3 {
+      color: #064e3b;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      color: #064e3b;
+      font-size: 23px;
+      font-weight: bold;
+      margin-top: 16px;
+    }
+
+    .details {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 5px 18px #0000000d;
+    }
+
+    .details p {
+      padding: 8px 0;
+      border-bottom: 1px solid #edf0ed;
+    }
+
+    .details p:last-child {
+      border-bottom: none;
+    }
+
+    .contact {
+      text-align: center;
+      background: white;
+      border-radius: 14px;
+      padding: 30px 20px;
+      box-shadow: 0 5px 18px #0000000d;
+    }
+
+    .payment {
+      margin-top: 25px;
+      background: #f5f8f5;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .payment p {
+      margin: 7px 0;
+    }
+
+    footer {
+      background: #033b2d;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 4px solid #d4af37;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      .hero {
+        padding: 45px 16px;
+      }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
-<body><header>
-<h1>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h1>
-<p>অনলাইন কোরআন শিক্ষা একাডেমি</p>
-<p>শিখুন • পড়ুন • কোরআনের আলোয় জীবন গড়ুন</p>
-</header><nav>
-<a href="#home">হোম</a>
-<a href="#courses">আমাদের কোর্স</a>
-<a href="#admission">ভর্তি</a>
-<a href="#contact">যোগাযোগ</a>
-</nav><section class="hero" id="home">
-<h2>ঘরে বসেই শিখুন পবিত্র কোরআন</h2>
-<p>কায়েদা, সিফারা ও কোরআন শিক্ষার অনলাইন ক্লাসে আপনাকে স্বাগতম।</p>
-<a class="button" href="#courses">কোর্স দেখুন</a>
-<a class="button" href="#contact">ভর্তির জন্য যোগাযোগ</a>
-</section><main class="container"><section class="card" id="courses">
-<h2>📚 আমাদের শিক্ষাক্রম</h2><h3>📗 কায়েদা শিক্ষা</h3>
-<p>আরবি হরফ পরিচয়, হরফের উচ্চারণ এবং প্রাথমিকভাবে কোরআন পড়া শেখার ব্যবস্থা।</p><h3>📘 সিফারা শিক্ষা</h3>
-<p>শিক্ষার্থীদের বর্তমান পড়ার স্তর অনুযায়ী কোরআন পাঠের অনুশীলন ও অগ্রগতির সহায়তা।</p><h3>📖 পবিত্র কোরআন শিক্ষা</h3>
-<p>নিয়মিত কোরআন তিলাওয়াতের অনুশীলন এবং শিক্ষকের তত্ত্বাবধানে পড়াশোনা।</p>
-</section><section class="card">
-<h2>🌟 আমাদের ক্লাসের সুবিধা</h2>
-<ul>
-<li>ঘরে বসে অনলাইন ক্লাস করার সুযোগ।</li>
-<li>শিক্ষার্থীর স্তর অনুযায়ী পাঠদান।</li>
-<li>নিয়মিত ক্লাস ও পড়ার অনুশীলন।</li>
-<li>ক্লাসের সময় ও ফি শিক্ষকের সঙ্গে আলোচনা করে নির্ধারণ।</li>
-</ul>
-</section><section class="card" id="admission">
-<h2>📝 ভর্তি সংক্রান্ত তথ্য</h2>
-<p>আমাদের অনলাইন মাদ্রাসায় ভর্তি হতে শিক্ষার্থীর নাম, বয়স, অভিভাবকের যোগাযোগ নম্বর এবং পছন্দের কোর্স জানিয়ে যোগাযোগ করুন।</p>
-<p>ভর্তির আগে ক্লাসের সময়, কোর্স ফি ও অনলাইন ক্লাসের পদ্ধতি নিশ্চিত করে নিন।</p>
-<a class="button" href="#contact">ভর্তির জন্য যোগাযোগ করুন</a>
-<p class="small">এই প্রাথমিক ওয়েবসাইটে এখনো স্বয়ংক্রিয় ভর্তি ফর্ম যুক্ত করা হয়নি।</p>
-</section><section class="card" id="contact">
-<h2>📞 যোগাযোগ করুন</h2>
-<p><strong>মাদ্রাসার নাম:</strong> অনলাইন কোরআন শিক্ষা একাডেমি</p>
-<p><strong>শিক্ষকের নাম:</strong> এখানে আপনার নাম লিখুন</p>
-<p><strong>মোবাইল নম্বর:</strong> এখানে আপনার যোগাযোগ নম্বর লিখুন</p>
-<p><strong>ক্লাসের মাধ্যম:</strong> অনলাইন ভিডিও কল</p>
-<p>ভর্তি, ক্লাসের সময় ও কোর্স ফি জানতে শিক্ষকের সঙ্গে যোগাযোগ করুন।</p>
-<p class="small">ওয়েবসাইট প্রকাশের আগে নিজের নাম ও যোগাযোগের তথ্য বসিয়ে নেবেন।</p>
-</section></main><footer>
-<p>অনলাইন কোরআন শিক্ষা একাডেমি</p>
-<p>আল্লাহ আমাদের কোরআন শেখা, বোঝা ও আমল করার তাওফিক দিন। আমিন।</p>
-</footer></body>
+
+<body>
+
+  <header>
+    <div class="logo">☪</div>
+    <h1>আল-নূর অনলাইন কোরআন একাডেমি</h1>
+    <p>শুদ্ধ কোরআন শিক্ষা, সুন্দর জীবনের পথে।</p>
+  </header>
+
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#courses">আমাদের কোর্স</a>
+    <a href="#schedule">ক্লাসের সময়</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="home">
+      <h2>শিখুন শুদ্ধভাবে পবিত্র কোরআন</h2>
+      <p>
+        শিশু ও শিক্ষার্থীদের জন্য অনলাইনে নূরানি কায়দা
+        এবং নাজেরা কোরআন শিক্ষা। নিয়মিত ক্লাস ও শিক্ষকের
+        তত্ত্বাবধানে কোরআন শেখার সুন্দর সুযোগ।
+      </p>
+      <a class="button" href="#contact">ভর্তি হতে যোগাযোগ করুন</a>
+    </section>
+
+    <section id="courses">
+      <h2 class="section-title">📚 আমাদের কোর্সসমূহ</h2>
+
+      <div class="courses">
+
+        <div class="card">
+          <h3>📖 নূরানি কায়দা</h3>
+          <p>
+            আরবি হরফ পরিচয়, হরকত এবং কোরআন পড়ার
+            প্রাথমিক নিয়ম ধাপে ধাপে শেখানো হবে।
+          </p>
+          <div class="price">মাসিক ফি: ১,০০০ টাকা</div>
+          <a class="button" href="#contact">ভর্তির জন্য যোগাযোগ</a>
+        </div>
+
+        <div class="card">
+          <h3>📗 নাজেরা কোরআন শিক্ষা</h3>
+          <p>
+            দেখে দেখে পবিত্র কোরআন পড়ার অনুশীলন
+            এবং শিক্ষকের তত্ত্বাবধানে নিয়মিত পাঠ।
+          </p>
+          <div class="price">মাসিক ফি: ১,০০০ টাকা</div>
+          <a class="button" href="#contact">ভর্তির জন্য যোগাযোগ</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="schedule">
+      <h2 class="section-title">🕒 ক্লাসের নিয়ম</h2>
+
+      <div class="details">
+        <p>📅 <strong>সপ্তাহে:</strong> ৫ দিন</p>
+        <p>⏰ <strong>প্রতিদিন:</strong> ১ ঘণ্টা</p>
+        <p>👥 <strong>ক্লাসের ধরন:</strong> অনলাইন গ্রুপ ক্লাস</p>
+        <p>📖 <strong>কোর্স:</strong> নূরানি কায়দা ও নাজেরা কোরআন শিক্ষা</p>
+        <p>💰 <strong>প্রতি কোর্সের মাসিক ফি:</strong> ১,০০০ টাকা</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">📞 ভর্তি ও যোগাযোগ</h2>
+
+      <div class="contact">
+        <p>
+          আল-নূর অনলাইন কোরআন একাডেমিতে ভর্তি হতে
+          নিচের WhatsApp বাটনের মাধ্যমে যোগাযোগ করুন।
+        </p>
+
+        <!--
+          পরে নিজের WhatsApp নম্বর বসাবে।
+          উদাহরণ: বাংলাদেশের 01712345678 নম্বর হলে
+          8801712345678 লিখবে।
+          নম্বরের শুরুতে + চিহ্ন দেবে না।
+        -->
+
+        <a
+          class="button"
+          href="https://wa.me/8801XXXXXXXXX"
+          target="_blank"
+          rel="noopener noreferrer">
+          WhatsApp-এ যোগাযোগ করুন
+        </a>
+
+        <div class="payment">
+          <h3>💳 পেমেন্টের তথ্য</h3>
+          <p><strong>বিকাশ:</strong> নম্বর পরে যোগ করা হবে</p>
+          <p><strong>নগদ:</strong> নম্বর পরে যোগ করা হবে</p>
+          <p>ভর্তির বিষয়ে যোগাযোগ করে পেমেন্টের তথ্য জেনে নিন।</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>আল-নূর অনলাইন কোরআন একাডেমি</strong></p>
+    <p>শুদ্ধ কোরআন শিক্ষা, সুন্দর জীবনের পথে।</p>
+    <p>© 2026 সর্বস্বত্ব সংরক্ষিত।</p>
+  </footer>
+
+</body>
 </html>
