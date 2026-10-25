@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="আল-নূর অনলাইন কোরআন একাডেমি — অনলাইনে কোরআন শিক্ষা ও ভর্তি।">
+<title>আল-নূর অনলাইন কোরআন একাডেমি</title>
+<style>
+:root{--green:#087443;--deep:#064e3b;--gold:#e9b949;--bg:#f4fbf6;--ink:#18352a}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+header{background:linear-gradient(135deg,#064e3b,#0b8050);color:white;text-align:center;padding:34px 16px}
+header .mark{font-size:42px}h1{margin:8px 0;font-size:clamp(25px,6vw,38px)}header p{margin:6px auto;max-width:680px}
+.wrap{max-width:900px;margin:auto;padding:18px}.card{background:white;border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 5px 22px #0b553014;border:1px solid #e2efe6}
+h2{margin-top:0;color:var(--deep)}.price{font-size:28px;color:var(--green);font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.course{border:1px solid #d9ebdf;border-radius:14px;padding:16px}.btn{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;border:0;cursor:pointer;font:inherit}.btn.secondary{background:#087c72}.btn.gold{background:#b77905}.muted{color:#587064;font-size:14px}
+label{display:block;font-weight:650;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #c9ddd0;border-radius:9px;font:inherit;background:#fff}form button{margin-top:16px;width:100%}
+.paynum{font-size:20px;font-weight:800;letter-spacing:.3px;word-break:break-word}
+.notice{background:#fff7df;border-left:4px solid var(--gold);padding:12px 14px;border-radius:8px}
+footer{text-align:center;padding:24px;color:#5c7567}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">🕌</div>
+  <h1>আল-নূর অনলাইন কোরআন একাডেমি</h1>
+  <p>সহিহভাবে কোরআন শেখার অনলাইন শিক্ষাকেন্দ্র</p>
+  <p><strong>ভর্তি চলছে</strong> — ঘরে বসেই অনলাইনে কোরআন শেখার সুযোগ</p>
+  <a class="btn gold" href="#admission">ভর্তির ফরম পূরণ করুন</a>
+</header>
+<main class="wrap">
+  <section class="card">
+    <h2>📚 আমাদের কোর্স</h2>
+    <div class="grid">
+      <div class="course"><h3>নূরানী কায়দা</h3><p>আরবি হরফ ও কোরআন পড়ার প্রাথমিক শিক্ষা।</p></div>
+      <div class="course"><h3>নাজেরা কোরআন</h3><p>শুদ্ধ উচ্চারণে কোরআন পড়ার অনুশীলন।</p></div>
+      <div class="course"><h3>তাজবিদসহ কোরআন</h3><p>তাজবিদের নিয়ম মেনে তিলাওয়াত শেখা।</p></div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>💰 মাসিক বেতন</h2>
+    <div class="price">১,০০০ টাকা / মাস</div>
+    <p>ভর্তি ফরম পাঠানোর পর একাডেমির সঙ্গে কথা বলে পেমেন্ট করুন। টাকা পাঠানোর পর লেনদেনের TrxID সংরক্ষণ করে রাখবেন।</p>
+  </section>
+  <section class="card">
+    <h2>📱 পেমেন্টের নির্দেশনা</h2>
+    <div class="grid">
+      <div class="course">
+        <h3>বিকাশ</h3>
+        <div class="paynum">01872508401</div>
+        <p class="muted">পেমেন্ট করার আগে নম্বর ও অ্যাকাউন্টের ধরন নিশ্চিত করে নিন।</p>
+        <button class="btn" type="button" onclick="copyText('01872508401')">বিকাশ নম্বর কপি করুন</button>
+      </div>
+      <div class="course">
+        <h3>নগদ</h3>
+        <div class="paynum">01620094263</div>
+        <p class="muted">পেমেন্ট করার আগে নম্বর ও অ্যাকাউন্টের ধরন নিশ্চিত করে নিন।</p>
+        <button class="btn secondary" type="button" onclick="copyText('01620094263')">নগদ নম্বর কপি করুন</button>
+      </div>
+    </div>
+    <p class="notice">সতর্কতা: এটি ম্যানুয়াল পেমেন্ট ব্যবস্থা। টাকা পাঠালেই ওয়েবসাইট স্বয়ংক্রিয়ভাবে পেমেন্ট যাচাই করবে না। একাডেমি লেনদেন যাচাই করে ভর্তি নিশ্চিত করবে। PIN বা OTP কাউকে দেবেন না।</p>
+    <p id="copymsg" aria-live="polite" class="muted"></p>
+  </section>
+  <section class="card" id="admission">
+    <h2>📝 অনলাইন ভর্তি ফরম</h2>
+    <p>ফরম পূরণ করে পাঠালে WhatsApp-এ ভর্তি আবেদনের মেসেজ তৈরি হবে। মেসেজটি পাঠানোর জন্য WhatsApp-এ Send চাপতে হবে।</p>
+    <form id="admissionForm">
+      <label for="student">শিক্ষার্থীর নাম *</label><input id="student" name="student" required>
+      <label for="age">বয়স *</label><input id="age" name="age" type="number" min="3" max="100" required>
+      <label for="guardian">অভিভাবকের মোবাইল নম্বর *</label><input id="guardian" name="guardian" type="tel" required>
+      <label for="course">কোন কোর্সে ভর্তি হতে চান? *</label>
+      <select id="course" name="course" required><option value="">কোর্স বেছে নিন</option><option>নূরানী কায়দা</option><option>নাজেরা কোরআন</option><option>তাজবিদসহ কোরআন</option></select>
+      <label for="time">ক্লাসের পছন্দের সময়</label><input id="time" name="time" placeholder="যেমন: সন্ধ্যা ৭টা">
+      <label for="payment">পেমেন্ট পদ্ধতি</label><select id="payment" name="payment"><option>এখনো পেমেন্ট করিনি</option><option>বিকাশ</option><option>নগদ</option></select>
+      <label for="trx">TrxID (টাকা পাঠিয়ে থাকলে)</label><input id="trx" name="trx" placeholder="লেনদেনের TrxID">
+      <button class="btn" type="submit">WhatsApp-এ ভর্তি আবেদন পাঠান</button>
+    </form>
+  </section>
+  <section class="card">
+    <h2>🎥 অনলাইন ক্লাস</h2>
+    <p>ভর্তি নিশ্চিত করার পর ক্লাসের সময় ও Google Meet-এর লিংক শিক্ষার্থী/অভিভাবককে WhatsApp-এ জানানো হবে।</p>
+    <a class="btn" href="https://wa.me/8801620094263" target="_blank" rel="noopener">WhatsApp-এ যোগাযোগ করুন</a>
+  </section>
+</main>
+<footer>© আল-নূর অনলাইন কোরআন একাডেমি</footer>
+<script>
+function copyText(value){
+  const msg=document.getElementById('copymsg');
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(value).then(()=>msg.textContent='নম্বর কপি হয়েছে: '+value).catch(()=>fallbackCopy(value,msg));
+  } else fallbackCopy(value,msg);
+}
+function fallbackCopy(value,msg){
+  const t=document.createElement('textarea');t.value=value;document.body.appendChild(t);t.select();
+  try{document.execCommand('copy');msg.textContent='নম্বর কপি হয়েছে: '+value;}catch(e){msg.textContent='নম্বরটি হাতে কপি করুন: '+value;}
+  t.remove();
+}
+document.getElementById('admissionForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const message=[
+    'আল-নূর অনলাইন কোরআন একাডেমিতে ভর্তি আবেদন',
+    'শিক্ষার্থীর নাম: '+v('student'),
+    'বয়স: '+v('age'),
+    'অভিভাবকের মোবাইল: '+v('guardian'),
+    'কোর্স: '+v('course'),
+    'পছন্দের সময়: '+(v('time')||'জানানো হয়নি'),
+    'পেমেন্ট পদ্ধতি: '+v('payment'),
+    'TrxID: '+(v('trx')||'এখনো দেওয়া হয়নি'),
+    'মাসিক বেতন: ১০০০ টাকা'
+  ].join('\n');
+  window.open('https://wa.me/8801620094263?text='+encodeURIComponent(message),'_blank','noopener');
+});
+</script>
+</body>
+</html>
